@@ -7,6 +7,11 @@ POSITIVE = 'z' # Key binding to positive reward
 NEGATIVE = '/' # Key binding to negative reward
 
 class TAMERInput(threading.Thread):
+    '''
+    This is an asynchronous thread dedicated to accepting human feedback as a reward signal for a supervised learner, as per the TAMER framework.
+    It waits for input from the user, then checks the input queue for the most recent state-action pair taken by the learner. It maps the user
+    input to a numarical reward signal, then places it in the output queue to be processed by the learner.
+    '''
     
     def __init__(self, in_q, out_q):
         super(TAMERInput, self).__init__()
