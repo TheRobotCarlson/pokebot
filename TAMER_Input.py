@@ -1,7 +1,7 @@
 import time
 import threading
 import msvcrt
-import Queue
+import queue
 
 POSITIVE = 'z' # Key binding to positive reward
 NEGATIVE = '/' # Key binding to negative reward
