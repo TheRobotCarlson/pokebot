@@ -31,8 +31,10 @@ class TAMERInput(threading.Thread):
                 continue
             
             #send reward back to the supervised learner
+            #if the queue is empty, we've already sent a signal this frame, so we ignore this key press
             try:
                 # non-blocking get is probably unnecessary, but timeout is there in case of multiple key presses in one timeframe
+                # Popping the S/A pair off the queue ensures we only get one signal per frame
                 state_action = self.in_q.get(block = False, timeout = 0.05) 
                 
                 # not sure of the format the supervised learner is gonna want for the feedback; that should be fixed here
