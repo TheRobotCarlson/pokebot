@@ -10,23 +10,27 @@ class TAMERInput(threading.Thread):
     
     def __init__(self, in_q, out_q):
         super(TAMERInput, self).__init__()
-        self.in_q = in_q
-        self.out_q = out_q
+        self.in_q = in_q # should be a LIFO queue so we guarantee the most recent state is checked
+        self.out_q = out_q # FIFO queue for feedback
         self.stoprequest = threading.Event()
         
     def run(self):
         while not self.stoprequest.isSet():
-            key = msvcrt.getche()
+            # blocks the thread until a key is pressed, which means we only look for state/action if the user tries to send feedback
+            key = msvcrt.getche() 
             if key == NEGATIVE:
                 reward = -1
             elif key == POSITIVE: 
                 reward = 1
-            else:
+            else: # ignore any key presses that aren't valid feedback keys
                 continue
             
             #send reward back to the supervised learner
             try:
-                state_action = self.in_q.get()
+                # non-blocking get is probably unnecessary, but timeout is there in case of multiple key presses in one timeframe
+                state_action = self.in_q.get(block = False, timeout = 0.05) 
+                
+                # not sure of the format the supervised learner is gonna want for the feedback; that should be fixed here
                 self.out_q.put((state_action,reward))
             except Queue.Empty:
                 continue
