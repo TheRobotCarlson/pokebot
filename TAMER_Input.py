@@ -20,7 +20,7 @@ class TAMERInput(threading.Thread):
         self.out_q = out_q # FIFO queue for feedback
         self.tkroot = tkinter.Tk()
         self.tkroot.title("TAMER Feedback")
-        self.mainframe = tkinter.ttk.Frame(tkroot, padding="3 3 12 12")
+        self.mainframe = tkinter.ttk.Frame(self.tkroot, padding="3 3 12 12")
         self.mainframe.grid(column=0, row=0, sticky='nesw')
         self.mainframe.columnconfigure(0, weight=1)
         self.mainframe.rowconfigure(0, weight=1)   
