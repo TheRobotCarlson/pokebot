@@ -47,7 +47,7 @@ class TAMERInput(threading.Thread):
             # not sure of the format the supervised learner is gonna want for the feedback; that should be fixed here
             self.out_q.put((state_action,1))
         except Queue.Empty:
-            continue
+            return
             
         
     def negative(inq, outq):
@@ -59,4 +59,4 @@ class TAMERInput(threading.Thread):
             # not sure of the format the supervised learner is gonna want for the feedback; that should be fixed here
             self.out_q.put((state_action,reward))
         except Queue.Empty:
-            continue        
+            return        
