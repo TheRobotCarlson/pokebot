@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7ec285-f743-4c9c-bdfc-9234f1023b45" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dqn_agent.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pokedex.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console-test.py" afterPath="$PROJECT_DIR$/console-test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parse_input.py" afterPath="$PROJECT_DIR$/parse_input.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pokebot.py" afterPath="$PROJECT_DIR$/pokebot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +21,8 @@
       <file leaf-file-name="pokebot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pokebot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+            <state relative-caret-position="464">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -34,11 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console-test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TAMER_Input.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-663">
+              <caret line="20" column="87" lean-forward="true" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+              <folding>
+                <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console-test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/console-test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="584">
+              <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -58,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parse_input.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parse_input.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parse_input.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="18" />
+            <state relative-caret-position="352">
+              <caret line="305" column="60" lean-forward="false" selection-start-line="305" selection-start-column="60" selection-end-line="305" selection-end-column="60" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -70,52 +86,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abilities.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/abilities.json">
+      <file leaf-file-name="dqn_agent.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dqn_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="208" column="92" lean-forward="true" selection-start-line="208" selection-start-column="92" selection-end-line="208" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="moves.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moves.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="596" column="94" lean-forward="false" selection-start-line="596" selection-start-column="88" selection-end-line="596" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console-feed-list.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console-feed-list.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="temp_console.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp_console.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="temp_console_2.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp_console_2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="117" lean-forward="false" selection-start-line="0" selection-start-column="117" selection-end-line="0" selection-end-column="117" />
-              <folding />
+            <state relative-caret-position="207">
+              <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="68" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,6 +112,8 @@
       <find>temp_str</find>
       <find>attack</find>
       <find>tapu lele</find>
+      <find>Naganadel</find>
+      <find>del</find>
     </findStrings>
     <replaceStrings>
       <replace>line</replace>
@@ -149,9 +129,10 @@
         <option value="$PROJECT_DIR$/console-read.py" />
         <option value="$PROJECT_DIR$/TAMER_Input.py" />
         <option value="$PROJECT_DIR$/console-feed-list.txt" />
-        <option value="$PROJECT_DIR$/pokebot.py" />
         <option value="$PROJECT_DIR$/temp_console.txt" />
         <option value="$PROJECT_DIR$/temp_console_2.txt" />
+        <option value="$PROJECT_DIR$/pokebot.py" />
+        <option value="$PROJECT_DIR$/dqn_agent.py" />
         <option value="$PROJECT_DIR$/console-test.py" />
         <option value="$PROJECT_DIR$/parse_input.py" />
       </list>
@@ -214,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.parse_input">
+  <component name="RunManager" selected="Python.console-test">
     <configuration name="TAMER_Input" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,11 +290,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.parse_input" />
-        <item index="1" class="java.lang.String" itemvalue="Python.console-test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TAMER_Input" />
-        <item index="3" class="java.lang.String" itemvalue="Python.console-read" />
-        <item index="4" class="java.lang.String" itemvalue="Python.pokebot" />
+        <item index="0" class="java.lang.String" itemvalue="Python.console-test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pokebot" />
+        <item index="2" class="java.lang.String" itemvalue="Python.parse_input" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TAMER_Input" />
+        <item index="4" class="java.lang.String" itemvalue="Python.console-read" />
       </list>
     </recent_temporary>
   </component>
@@ -337,9 +318,10 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32092425" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35003212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35003212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -350,7 +332,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -586,16 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
@@ -642,14 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pokedex.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="18799" column="59" lean-forward="false" selection-start-line="18799" selection-start-column="50" selection-end-line="18799" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="733">
@@ -684,14 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pokebot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/console-read.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -702,22 +657,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/console-test.py">
+    <entry file="file://$PROJECT_DIR$/pokedex.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="445295">
+          <caret line="15355" column="55" lean-forward="false" selection-start-line="15355" selection-start-column="55" selection-end-line="15355" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pokebot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="20" column="87" lean-forward="true" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parse_input.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="18" />
+        <state relative-caret-position="352">
+          <caret line="305" column="60" lean-forward="false" selection-start-line="305" selection-start-column="60" selection-end-line="305" selection-end-column="60" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dqn_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="68" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

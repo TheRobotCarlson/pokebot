@@ -182,7 +182,7 @@ def parse_json(s):
     return json.loads(re.sub(r'\\', '', s))  # ast.literal_eval(
 
 # lines = tuple(open("console-feed-list.txt", 'r', encoding='utf8'))
-lines = tuple(open("temp_console_2.txt", 'r', encoding='utf8'))
+# lines = tuple(open("temp_console_2.txt", 'r', encoding='utf8'))
 
 
 def find(l, p):
@@ -193,194 +193,218 @@ def inside(l, p):
     # print([True if p in x else False for x in l])
     return any([True if p in x else False for x in l])
 
-my_name = "therobotcarlson2"
-my_identity = ""
-enemy_identity = ""
 
-feature_vector = []
-# weather: id ( or None)
-# terrain: id ( or None)
-# trick room: bool
-field = []
+def read_console(lines):
+    my_name = "therobotcarlson2"
+    my_identity = ""
+    enemy_identity = ""
 
-# stealth rock: bool
-# sticky web: bool
-# spikes: number of layers
-# toxic spikes: number of layers
-hazards_side_p1 = []
-hazards_side_p2 = []
+    feature_vector = []
+    # weather: id ( or None)
+    # terrain: id ( or None)
+    # trick room: bool
+    field = []
 
-# reflect: bool
-# light screen: bool  (# aurora veil = reflect + lightscreen)
-# safeguard: bool
-defenses_side_p1 = []
-defenses_side_p2 = []
+    # stealth rock: bool
+    # sticky web: bool
+    # spikes: number of layers
+    # toxic spikes: number of layers
+    hazards_side_p1 = []
+    hazards_side_p2 = []
 
-# types: id  # one hot encoding
-# ability: id
-# item: id
-# move set: set<ids>
-# level: int
-# hp%: float
-# major status: id
-# Burn, Poison, Paralysis, Sleep, Freeze
-# volatile status:
-# confusion: bool
-# taunt: bool
-# can't switch: bool
-# stat changes: list<int>
+    # reflect: bool
+    # light screen: bool  (# aurora veil = reflect + lightscreen)
+    # safeguard: bool
+    defenses_side_p1 = []
+    defenses_side_p2 = []
 
-pokemon_data_p1 = []
-pokemon_data_p2 = []
+    # types: id  # one hot encoding
+    # ability: id
+    # item: id
+    # move set: set<ids>
+    # level: int
+    # hp%: float
+    # major status: id
+    # Burn, Poison, Paralysis, Sleep, Freeze
+    # volatile status:
+    # confusion: bool
+    # taunt: bool
+    # can't switch: bool
+    # stat changes: list<int>
 
-pokemon_dict_p2 = {}
+    pokemon_data_p1 = []
+    pokemon_data_p2 = []
 
-for line in lines:
-    line = line[:-1]
-    # print(line)
-    line = ast.literal_eval(line)['message']
+    pokemon_p1_val = False
+    pokemon_p2_val = False
 
-    loc = line.find("{")
+    pokemon_dict_p1 = {}
+    pokemon_dict_p2 = {}
 
-    if loc != -1:
-        re.sub(r'\\', '', re.sub(r'null', '"null"', line[loc:-1]))
-        line = parse_json(line[loc:-1])
+    for line in lines:
+        line = line['message']
 
-        if 'searching' in line:
-            # print(line)
-            continue  # do nothing
-        elif 'wait' in line:
-            continue  # also do nothing
-        elif 'active' in line:  # ['active']
-            if line['side']['name'] == my_name:
-                # print("updating %s's pokemon" % my_identity)
+        loc = line.find("{")
 
-                for pokemon in line['side']['pokemon']:
-                    # print(pokemon['ident'][4:].lower().replace(' ', ''))
-                    pokemon_base = get_pokemon(pokemon["ident"][4:].lower().replace(' ', ''))
-                    # print(pokemon_base['id'], pokemon_base['types'], pokemon_base['abilities'])
-                    # print(pokemon['active'], pokemon['condition'].split("/"), pokemon['moves'])
-                    if pokemon['active']:
-                        pokemon_data_p1 = get_pokemon_vector(pokemon['details'],
-                                                             pokemon['condition'],
-                                                             pokemon['stats'],
-                                                             pokemon['moves'],
-                                                             [pokemon['item']],
-                                                             pokemon['ability'])
-                        # print(pokemon['ident'][4:].lower())
-        elif 'forceSwitch' in line:
-            # print("forceSwitch:", line['forceSwitch'][0])
-            continue
-    else:
-        line_data = line.replace("\\n", "").split('"')
-        if len(line_data) == 1:
-            continue
+        if loc != -1:
+            re.sub(r'\\', '', re.sub(r'null', '"null"', line[loc:-1]))
+            line = parse_json(line[loc:-1])
+
+            if 'searching' in line:
+                # print(line)
+                continue  # do nothing
+            elif 'wait' in line:
+                continue  # also do nothing
+            elif 'active' in line:  # ['active']
+                if line['side']['name'] == my_name:
+                    # print("updating %s's pokemon" % my_identity)
+
+                    for pokemon in line['side']['pokemon']:
+                        # print(pokemon['ident'][4:].lower().replace(' ', ''))
+                        pokemon_base = get_pokemon(pokemon["ident"][4:].lower().replace(' ', ''))
+                        # print(pokemon_base['id'], pokemon_base['types'], pokemon_base['abilities'])
+                        # print(pokemon['active'], pokemon['condition'].split("/"), pokemon['moves'])
+                        if pokemon['active']:
+                            pokemon_data_p1 = get_pokemon_vector(pokemon['details'],
+                                                                 pokemon['condition'],
+                                                                 pokemon['stats'],
+                                                                 pokemon['moves'],
+                                                                 [pokemon['item']],
+                                                                 pokemon['ability'])
+                            pokemon_dict_p1 = pokemon
+                            pokemon_p1_val = True
+                            # print(pokemon['ident'][4:].lower())
+            elif 'forceSwitch' in line:
+                # print("forceSwitch:", line['forceSwitch'][0])
+                continue
         else:
-            line_data = line_data[1].split("|")[1:]
-        line_data = [x for x in line_data if x != '']
+            line_data = line.replace("\\n", "").split('"')
+            if len(line_data) == 1:
+                continue
+            else:
+                line_data = line_data[1].split("|")[1:]
+            line_data = [x for x in line_data if x != '']
 
-        if inside(line_data, "player"):
-            if 'start' in line_data:
-                switch_index = line_data.index('switch')
-                pokemon_name = line_data[switch_index + 1][5:].lower().replace(" ", "")
-                pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
-                stats, ability = initialize_mon(pokemon_name, pokemon_level)
-
-                pokemon_data_p2 = get_pokemon_vector(line_data[switch_index + 2],
-                                                     line_data[switch_index + 3],
-                                                     stats,
-                                                     [],
-                                                     [],
-                                                     ability)
-                print(line_data[switch_index + 1][5:].lower())
-                pokemon_dict_p2[pokemon_name] = {
-                    'moves': [],
-                    'abilities': [ability],
-                    'stats': stats,
-                    'level': pokemon_level,
-                    'condition': line_data[switch_index + 3]
-                }
-
-        elif inside(line_data, "choice"):
-            if inside(line_data, "switch"):
-                # print(line_data)
-
-                switch_index = line_data.index('switch')
-
-                if my_identity in line_data[switch_index + 1] and "switch" in line_data[switch_index + 1:]:
-                    switch_index = line_data.index('switch', switch_index + 1)
-
-                if enemy_identity in line_data[switch_index + 1]:
+            if inside(line_data, "player"):
+                if 'start' in line_data:
+                    switch_index = line_data.index('switch')
                     pokemon_name = line_data[switch_index + 1][5:].lower().replace(" ", "")
+                    pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
+                    stats, ability = initialize_mon(pokemon_name, pokemon_level)
 
-                    if pokemon_name not in pokemon_dict_p2:
-                        pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
-                        stats, ability = initialize_mon(pokemon_name, pokemon_level)
+                    pokemon_data_p2 = get_pokemon_vector(line_data[switch_index + 2],
+                                                         line_data[switch_index + 3],
+                                                         stats,
+                                                         [],
+                                                         [],
+                                                         ability)
+                    print(line_data[switch_index + 1][5:].lower())
+                    pokemon_dict_p2 = {
+                        'moves': [],
+                        'abilities': [ability],
+                        'stats': stats,
+                        'level': line_data[switch_index + 2],
+                        'condition': line_data[switch_index + 3]
+                    }
+                    pokemon_p2_val = True
 
-                        pokemon_data_p2 = get_pokemon_vector(line_data[switch_index + 2],
-                                                             line_data[switch_index + 3],
-                                                             stats,
-                                                             [],
-                                                             [],
-                                                             ability)
-                        pokemon_dict_p2[pokemon_name] = {
-                            'moves': [],
-                            'abilities': [ability],
-                            'stats': stats,
-                            'level': pokemon_level,
-                            'condition': line_data[switch_index + 3]
-                        }
+            elif inside(line_data, "choice"):
+                if inside(line_data, "switch"):
+                    # print(line_data)
 
+                    switch_index = line_data.index('switch')
+
+                    if my_identity in line_data[switch_index + 1] and "switch" in line_data[switch_index + 1:]:
+                        switch_index = line_data.index('switch', switch_index + 1)
+
+                    if enemy_identity in line_data[switch_index + 1]:
+                        pokemon_name = line_data[switch_index + 1][5:].lower().replace(" ", "")
+
+                        if pokemon_name not in pokemon_dict_p2:
+                            pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
+                            stats, ability = initialize_mon(pokemon_name, pokemon_level)
+
+                            pokemon_data_p2 = get_pokemon_vector(line_data[switch_index + 2],
+                                                                 line_data[switch_index + 3],
+                                                                 stats,
+                                                                 [],
+                                                                 [],
+                                                                 ability)
+                            pokemon_dict_p2 = {
+                                'moves': [],
+                                'abilities': [ability],
+                                'stats': stats,
+                                'level': line_data[switch_index + 2],
+                                'condition': line_data[switch_index + 3]
+                            }
+                            pokemon_p2_val = True
+
+                        last_condition = ""
+                        pokemon_name = ""
+                        for i, piece in enumerate(line_data):
+                            if enemy_identity in piece:
+                                pokemon_name = piece[5:].lower().replace(" ", "")
+                                if i + 1 < len(line_data) and re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
+                                    last_condition = line_data[i + 1]
+
+                        if pokemon_name != "" and last_condition != "":
+                            pokemon_dict_p2[pokemon_name]["condition"] = last_condition
+
+                elif inside(line_data, "move"):
                     last_condition = ""
                     pokemon_name = ""
                     for i, piece in enumerate(line_data):
                         if enemy_identity in piece:
                             pokemon_name = piece[5:].lower().replace(" ", "")
-                            if re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
+                            if i + 1 < len(line_data) and re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
                                 last_condition = line_data[i + 1]
 
                     if pokemon_name != "" and last_condition != "":
                         pokemon_dict_p2[pokemon_name]["condition"] = last_condition
 
-            elif inside(line_data, "move"):
-                last_condition = ""
-                pokemon_name = ""
-                for i, piece in enumerate(line_data):
-                    if enemy_identity in piece:
-                        pokemon_name = piece[5:].lower().replace(" ", "")
-                        if re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
-                            last_condition = line_data[i + 1]
-
-                if pokemon_name != "" and last_condition != "":
-                    pokemon_dict_p2[pokemon_name]["condition"] = last_condition
-            else:
+                else:
+                    # print(line_data)
+                    continue
+            elif inside(line_data, "init"):  # done
+                my_identity = "p1" if line_data[-3] == my_name else "p2"
+                enemy_identity = "p2" if "p1" == my_identity else "p1"
+                # print("my id:", my_identity)
+                continue
+            elif inside(line_data, "inactive"):
                 # print(line_data)
                 continue
-        elif inside(line_data, "init"):  # done
-            my_identity = "p1" if line_data[-3] == my_name else "p2"
-            enemy_identity = "p2" if "p1" == my_identity else "p1"
-            # print("my id:", my_identity)
-            continue
-        elif inside(line_data, "inactive"):
-            # print(line_data)
-            continue
-        elif inside(line_data, "/search"):
-            # print(line_data)
-            continue
-        elif inside(line_data, "/choose"):
-            # print(line_data)
-            continue
-        elif inside(line_data, "raw"):  # done
-            elo_change_str = re.search(r'[\-\+](\d+)', line_data[-1]).group(0)
+            elif inside(line_data, "/search"):
+                # print(line_data)
+                continue
+            elif inside(line_data, "/choose"):
+                # print(line_data)
+                continue
+            elif inside(line_data, "raw"):  # done
+                elo_change_str = re.search(r'[\-\+](\d+)', line_data[-1]).group(0)
 
-            if "+" in elo_change_str:
-                elo_change = int(elo_change_str[1:])
-            else:
-                elo_change = int(elo_change_str)
+                if "+" in elo_change_str:
+                    elo_change = int(elo_change_str[1:])
+                else:
+                    elo_change = int(elo_change_str)
 
-            # print(elo_change, "need to start a new game")
-            break
+                print(elo_change, "need to start a new game")
+                return
 
-        feature_vector = pokemon_data_p1 + pokemon_data_p2
+            if pokemon_p2_val and pokemon_p1_val:
+                pokemon_data_p2 = get_pokemon_vector(pokemon_dict_p2['level'],
+                                                     pokemon_dict_p2['condition'],
+                                                     pokemon_dict_p2['stats'],
+                                                     pokemon_dict_p2['moves'],
+                                                     [],
+                                                     pokemon_dict_p2['abilities'])
 
-        print(len(feature_vector))
+                pokemon_data_p1 = get_pokemon_vector(pokemon_dict_p1['details'],
+                                                     pokemon_dict_p1['condition'],
+                                                     pokemon_dict_p1['stats'],
+                                                     pokemon_dict_p1['moves'],
+                                                     [pokemon_dict_p1['item']],
+                                                     pokemon_dict_p1['ability'])
+
+                feature_vector = pokemon_data_p1 + pokemon_data_p2
+
+                print(len(feature_vector), feature_vector)

@@ -14,7 +14,7 @@ abilities_dict = json.loads(file.read())
 
 # def get_moves
 
-
+print(pokedex["naganadel"])
 def get_ability(ability):
     return abilities_dict[ability]
 

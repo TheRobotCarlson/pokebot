@@ -8,6 +8,7 @@ from selenium.common.exceptions import ElementNotVisibleException
 from time import sleep
 import urllib.parse
 import random
+from parse_input import read_console
 
 
 chrome_options = webdriver.ChromeOptions()
@@ -63,7 +64,6 @@ while True:
         if len(driver.find_elements_by_name("chooseMove")) > 0:
             random.choice(driver.find_elements_by_name("chooseMove")).click()
 
-    for entry in driver.get_log('browser'):
-
+    read_console(driver.get_log('browser'))
 
     sleep(5)
