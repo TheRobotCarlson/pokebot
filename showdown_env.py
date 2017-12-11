@@ -18,11 +18,10 @@ class showdown:
         self.out_q = queue.Queue()
         self.tamer = TAMERInput(self.in_q, self.out_q)
 
-        self.tamer.start()
         self.username = username
 
         self.init_selenium()
-        self.tamer.run()
+        # self.tamer.run()
 
     def init_selenium(self):
         chrome_options = webdriver.ChromeOptions()
@@ -63,20 +62,24 @@ class showdown:
         while not self.in_q.empty():
             self.in_q.get()
 
-        if action > 3:
-            switch_elements = self.driver.find_elements_by_name("chooseSwitch")
-            if 0 < action - 4 < len(switch_elements):
-                self.driver.find_elements_by_name("chooseSwitch")[action - 4].click()
-        else:
-            move_elements = self.driver.find_elements_by_name("chooseMove")
-            if 0 < action < len(move_elements):
-                self.driver.find_elements_by_name("chooseMove")[action].click()
+        prev_state = self.state
+        self.state = []
 
-        self.in_q.put((self.state, action))
+        while self.state != -1 or len(self.state) == 0:
+            if action > 3:
+                switch_elements = self.driver.find_elements_by_name("chooseSwitch")
+                if 0 < action - 4 < len(switch_elements):
+                    self.driver.find_elements_by_name("chooseSwitch")[action - 4].click()
+            else:
+                move_elements = self.driver.find_elements_by_name("chooseMove")
+                if 0 < action < len(move_elements):
+                    self.driver.find_elements_by_name("chooseMove")[action].click()
+
+            self.state = read_console(self.driver.get_log('browser'))
+
+        self.in_q.put((prev_state, action))
 
         sleep(5)
-
-        self.state = read_console(self.driver.get_log('browser'))
 
         if self.state == -1:
             return [], 0, True
