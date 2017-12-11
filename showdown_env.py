@@ -56,11 +56,23 @@ class showdown:
     def get_actions(self):
         return list(self.driver.find_elements_by_name("chooseMove")) + list(self.driver.find_elements_by_name("chooseSwitch"))
 
+    def can_perform_action(self, action):
+        if action > 3:
+            switch_elements = self.driver.find_elements_by_name("chooseSwitch")
+            if 0 < action - 4 < len(switch_elements):
+                return True
+        else:
+            move_elements = self.driver.find_elements_by_name("chooseMove")
+            if 0 < action < len(move_elements):
+                return True
+
+        return False
+
     # action
     def step(self, action):
 
-        while not self.in_q.empty():
-            self.in_q.get()
+        while not self.tamer.in_q.empty():
+            self.tamer.in_q.get()
 
         prev_state = self.state
         self.state = []
@@ -75,19 +87,20 @@ class showdown:
                 if 0 < action < len(move_elements):
                     self.driver.find_elements_by_name("chooseMove")[action].click()
 
+            sleep(2)
             self.state = read_console(self.driver.get_log('browser'))
 
-        self.in_q.put((prev_state, action))
+        self.tamer.in_q.put((prev_state, action))
 
         sleep(5)
 
         if self.state == -1:
             return [], 0, True
         else:
-            if self.out_q.empty():
+            if self.tamer.out_q.empty():
                 reward = 0
             else:
-                reward = self.out_q.get()
+                reward = self.tamer.out_q.get()[-1]
                 print(reward)
             return self.state, reward, False
 

@@ -40,6 +40,12 @@ class DQNAgent:
         act_values = self.model.predict(state)
         return np.argmax(act_values[0])  # returns action
 
+    def act_all(self, state):
+        if np.random.rand() <= self.epsilon:
+            return random.randrange(self.action_size)
+        act_values = self.model.predict(state)
+        return act_values  # returns actions
+
     def replay(self, batch_size):
         minibatch = random.sample(self.memory, batch_size)
         for state, action, reward, next_state, done in minibatch:
@@ -75,9 +81,14 @@ if __name__ == "__main__":
         state = np.reshape(state, [1, state_size])
         for time in range(500):
             # env.render()
+            no_list = []
             action = agent.act(state)
-            next_state, reward, done = env.step(action)
-            reward = reward if not done else -10
+            if env.can_perform_action(action):
+                next_state, reward, done = env.step(action)
+            else:
+                next_state, reward, done = state, 0, False
+            
+            reward = reward if not done else 0
             next_state = np.reshape(next_state, [1, state_size])
             agent.remember(state, action, reward, next_state, done)
             state = next_state
