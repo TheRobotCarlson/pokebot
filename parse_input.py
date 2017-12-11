@@ -242,11 +242,17 @@ def read_console(lines):
     pokemon_dict_p2 = {}
 
     for line in lines:
+
         line = line['message']
+        loc = line.find("rooms")
+
+        if loc != -1:
+            continue
 
         loc = line.find("{")
 
         if loc != -1:
+            print(line)
             re.sub(r'\\', '', re.sub(r'null', '"null"', line[loc:-1]))
             line = parse_json(line[loc:-1])
 
@@ -261,7 +267,7 @@ def read_console(lines):
 
                     for pokemon in line['side']['pokemon']:
                         # print(pokemon['ident'][4:].lower().replace(' ', ''))
-                        pokemon_base = get_pokemon(pokemon["ident"][4:].lower().replace(' ', ''))
+                        # pokemon_base = get_pokemon(pokemon["ident"][4:].lower().replace(' ', ''))
                         # print(pokemon_base['id'], pokemon_base['types'], pokemon_base['abilities'])
                         # print(pokemon['active'], pokemon['condition'].split("/"), pokemon['moves'])
                         if pokemon['active']:
@@ -347,7 +353,7 @@ def read_console(lines):
                                 if i + 1 < len(line_data) and re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
                                     last_condition = line_data[i + 1]
 
-                        if pokemon_name != "" and last_condition != "":
+                        if pokemon_name != "" and last_condition != "" and pokemon_name in pokemon_dict_p2:
                             pokemon_dict_p2[pokemon_name]["condition"] = last_condition
 
                 elif inside(line_data, "move"):
@@ -355,11 +361,12 @@ def read_console(lines):
                     pokemon_name = ""
                     for i, piece in enumerate(line_data):
                         if enemy_identity in piece:
-                            pokemon_name = piece[5:].lower().replace(" ", "")
                             if i + 1 < len(line_data) and re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
+                                pokemon_name = piece[5:].lower().replace(" ", "")
                                 last_condition = line_data[i + 1]
 
-                    if pokemon_name != "" and last_condition != "":
+                    if pokemon_name != "" and last_condition != "" and pokemon_name in pokemon_dict_p2:
+                        print(line_data)
                         pokemon_dict_p2[pokemon_name]["condition"] = last_condition
 
                 else:
@@ -388,7 +395,7 @@ def read_console(lines):
                     elo_change = int(elo_change_str)
 
                 print(elo_change, "need to start a new game")
-                return
+                return -1
 
             if pokemon_p2_val and pokemon_p1_val:
                 pokemon_data_p2 = get_pokemon_vector(pokemon_dict_p2['level'],
@@ -408,3 +415,5 @@ def read_console(lines):
                 feature_vector = pokemon_data_p1 + pokemon_data_p2
 
                 print(len(feature_vector), feature_vector)
+
+    return feature_vector

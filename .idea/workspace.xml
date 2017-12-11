@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7ec285-f743-4c9c-bdfc-9234f1023b45" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dqn_agent.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pokedex.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/showdown_env.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console-test.py" afterPath="$PROJECT_DIR$/console-test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TAMER_Input.py" afterPath="$PROJECT_DIR$/TAMER_Input.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dqn_agent.py" afterPath="$PROJECT_DIR$/dqn_agent.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parse_input.py" afterPath="$PROJECT_DIR$/parse_input.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pokebot.py" afterPath="$PROJECT_DIR$/pokebot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,20 +40,21 @@
       <file leaf-file-name="TAMER_Input.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="20" column="87" lean-forward="true" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+            <state relative-caret-position="493">
+              <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="19" />
               <folding>
-                <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+                <element signature="e#0#16#0" expanded="true" />
+                <marker date="1513010316162" expanded="true" signature="0:8" ph="import ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console-test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="console-test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/console-test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+            <state relative-caret-position="178">
+              <caret line="49" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -74,11 +74,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="showdown_env.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/showdown_env.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="parse_input.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parse_input.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="305" column="60" lean-forward="false" selection-start-line="305" selection-start-column="60" selection-end-line="305" selection-end-column="60" />
+            <state relative-caret-position="1093">
+              <caret line="250" column="0" lean-forward="true" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -89,8 +101,8 @@
       <file leaf-file-name="dqn_agent.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dqn_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="68" selection-end-column="19" />
+            <state relative-caret-position="377">
+              <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -127,14 +139,15 @@
       <list>
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/console-read.py" />
-        <option value="$PROJECT_DIR$/TAMER_Input.py" />
         <option value="$PROJECT_DIR$/console-feed-list.txt" />
         <option value="$PROJECT_DIR$/temp_console.txt" />
         <option value="$PROJECT_DIR$/temp_console_2.txt" />
         <option value="$PROJECT_DIR$/pokebot.py" />
-        <option value="$PROJECT_DIR$/dqn_agent.py" />
         <option value="$PROJECT_DIR$/console-test.py" />
+        <option value="$PROJECT_DIR$/dqn_agent.py" />
+        <option value="$PROJECT_DIR$/TAMER_Input.py" />
         <option value="$PROJECT_DIR$/parse_input.py" />
+        <option value="$PROJECT_DIR$/showdown_env.py" />
       </list>
     </option>
   </component>
@@ -195,7 +208,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.console-test">
+  <component name="RunManager" selected="Python.dqn_agent">
     <configuration name="TAMER_Input" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -213,23 +226,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="console-read" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pokebot" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/console-read.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="console-test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -243,6 +239,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pokebot" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/console-test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="dqn_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pokebot" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dqn_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,17 +297,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.pokebot" />
       <item index="1" class="java.lang.String" itemvalue="Python.console-test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.console-read" />
-      <item index="3" class="java.lang.String" itemvalue="Python.TAMER_Input" />
-      <item index="4" class="java.lang.String" itemvalue="Python.parse_input" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TAMER_Input" />
+      <item index="3" class="java.lang.String" itemvalue="Python.parse_input" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dqn_agent" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.console-test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pokebot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.parse_input" />
-        <item index="3" class="java.lang.String" itemvalue="Python.TAMER_Input" />
-        <item index="4" class="java.lang.String" itemvalue="Python.console-read" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dqn_agent" />
+        <item index="1" class="java.lang.String" itemvalue="Python.console-test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pokebot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.parse_input" />
+        <item index="4" class="java.lang.String" itemvalue="Python.TAMER_Input" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +326,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3224" height="1754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -321,7 +333,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35003212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35003212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -356,7 +368,8 @@
         <state relative-caret-position="87">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
-            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1513010316162" expanded="true" signature="0:8" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -422,7 +435,8 @@
         <state relative-caret-position="87">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
-            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1513010316162" expanded="true" signature="0:8" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -639,24 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pokemon_init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-547">
-          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console-read.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pokedex.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445295">
@@ -673,40 +669,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
+    <entry file="file://$PROJECT_DIR$/pokemon_init.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="20" column="87" lean-forward="true" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+        <state relative-caret-position="-547">
+          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="49" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
-            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parse_input.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="305" column="60" lean-forward="false" selection-start-line="305" selection-start-column="60" selection-end-line="305" selection-end-column="60" />
+        <state relative-caret-position="1093">
+          <caret line="250" column="0" lean-forward="true" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1513010316162" expanded="true" signature="0:8" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dqn_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="68" selection-end-column="19" />
+        <state relative-caret-position="377">
+          <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/console-test.py">
+    <entry file="file://$PROJECT_DIR$/showdown_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+        <state relative-caret-position="580">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>

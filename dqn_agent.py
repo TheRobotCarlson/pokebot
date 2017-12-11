@@ -4,10 +4,11 @@ from collections import deque
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
+from showdown_env import showdown
 
 EPISODES = 100
 
-
+# https://github.com/keon/deep-q-learning/blob/master/dqn.py
 class DQNAgent:
     def __init__(self, state_size, action_size):
         self.state_size = state_size
@@ -67,14 +68,15 @@ if __name__ == "__main__":
     # agent.load("./save/pokebot_training.h5")
     done = False
     batch_size = 32
+    env = showdown("therobotcarlson2")
 
     for e in range(EPISODES):
-        state = env.reset()
+        state = [0] * state_size
         state = np.reshape(state, [1, state_size])
         for time in range(500):
             # env.render()
             action = agent.act(state)
-            next_state, reward, done, _ = env.step(action)
+            next_state, reward, done = env.step(action)
             reward = reward if not done else -10
             next_state = np.reshape(next_state, [1, state_size])
             agent.remember(state, action, reward, next_state, done)
