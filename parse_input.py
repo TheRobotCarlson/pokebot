@@ -29,7 +29,7 @@ types_list = list(types_set)
 abilities_list = list(abilities_dict.keys())
 moves_list = list(moves_dict.keys())
 items_list = list(items_dict.keys())
-conditions_list = ['burn', 'poison', 'paralysis', 'sleep', 'freeze', 'confusion', 'taunt', 'cantswitch', 'fnt']
+conditions_list = ['brn', 'psn', 'paralysis', 'sleep', 'freeze', 'confusion', 'taunt', 'cantswitch', 'fnt']
 weather_list = ["sun", "rain", "hail", "sand", "other"]
 weather_corrections = {"harsh sun": "sun", "torrential rain": "rain"}
 
@@ -195,6 +195,7 @@ def inside(l, p):
 
 my_name = "therobotcarlson2"
 my_identity = ""
+enemy_identity = ""
 
 feature_vector = []
 # weather: id ( or None)
@@ -281,7 +282,7 @@ for line in lines:
         if inside(line_data, "player"):
             if 'start' in line_data:
                 switch_index = line_data.index('switch')
-                pokemon_name = line_data[switch_index + 1][5:].lower()
+                pokemon_name = line_data[switch_index + 1][5:].lower().replace(" ", "")
                 pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
                 stats, ability = initialize_mon(pokemon_name, pokemon_level)
 
@@ -296,21 +297,68 @@ for line in lines:
                     'moves': [],
                     'abilities': [ability],
                     'stats': stats,
+                    'level': pokemon_level,
+                    'condition': line_data[switch_index + 3]
                 }
 
-            continue
         elif inside(line_data, "choice"):
             if inside(line_data, "switch"):
                 # print(line_data)
-                continue
+
+                switch_index = line_data.index('switch')
+
+                if my_identity in line_data[switch_index + 1] and "switch" in line_data[switch_index + 1:]:
+                    switch_index = line_data.index('switch', switch_index + 1)
+
+                if enemy_identity in line_data[switch_index + 1]:
+                    pokemon_name = line_data[switch_index + 1][5:].lower().replace(" ", "")
+
+                    if pokemon_name not in pokemon_dict_p2:
+                        pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
+                        stats, ability = initialize_mon(pokemon_name, pokemon_level)
+
+                        pokemon_data_p2 = get_pokemon_vector(line_data[switch_index + 2],
+                                                             line_data[switch_index + 3],
+                                                             stats,
+                                                             [],
+                                                             [],
+                                                             ability)
+                        pokemon_dict_p2[pokemon_name] = {
+                            'moves': [],
+                            'abilities': [ability],
+                            'stats': stats,
+                            'level': pokemon_level,
+                            'condition': line_data[switch_index + 3]
+                        }
+
+                    last_condition = ""
+                    pokemon_name = ""
+                    for i, piece in enumerate(line_data):
+                        if enemy_identity in piece:
+                            pokemon_name = piece[5:].lower().replace(" ", "")
+                            if re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
+                                last_condition = line_data[i + 1]
+
+                    if pokemon_name != "" and last_condition != "":
+                        pokemon_dict_p2[pokemon_name]["condition"] = last_condition
+
             elif inside(line_data, "move"):
-                # print(line_data)
-                continue
+                last_condition = ""
+                pokemon_name = ""
+                for i, piece in enumerate(line_data):
+                    if enemy_identity in piece:
+                        pokemon_name = piece[5:].lower().replace(" ", "")
+                        if re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
+                            last_condition = line_data[i + 1]
+
+                if pokemon_name != "" and last_condition != "":
+                    pokemon_dict_p2[pokemon_name]["condition"] = last_condition
             else:
                 # print(line_data)
                 continue
         elif inside(line_data, "init"):  # done
             my_identity = "p1" if line_data[-3] == my_name else "p2"
+            enemy_identity = "p2" if "p1" == my_identity else "p1"
             # print("my id:", my_identity)
             continue
         elif inside(line_data, "inactive"):
@@ -332,7 +380,7 @@ for line in lines:
 
             # print(elo_change, "need to start a new game")
             break
-        else:
-            # print(line_data)
-            continue
 
+        feature_vector = pokemon_data_p1 + pokemon_data_p2
+
+        print(len(feature_vector))
