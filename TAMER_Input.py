@@ -42,7 +42,11 @@ class TAMERInput(threading.Thread):
         
         self.in_q = in_q 
         self.out_q = out_q 
+
+        self.stoprequest = threading.Event()
         
+    # Must be called to actually start the window
+    def run(self):
         # Set up the tkinter window
         self.tkroot = tkinter.Tk()
         self.tkroot.title("TAMER Feedback")
@@ -56,11 +60,6 @@ class TAMERInput(threading.Thread):
         # Allow the user to use the up and down arrows instead of clicking
         self.tkroot.bind('<Up>', lambda event: self.positive())
         self.tkroot.bind('<Down>', lambda event: self.negative())
-
-        self.stoprequest = threading.Event()
-        
-    # Must be called to actually start the window
-    def run(self):
         self.tkroot.mainloop()
 
     # Can be called instead of closing the window to end the process
