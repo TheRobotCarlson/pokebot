@@ -38,6 +38,7 @@ class TAMERInput(threading.Thread):
     
     def __init__(self, in_q, out_q):
         super(TAMERInput, self).__init__()
+        self.start()
         
         self.in_q = in_q 
         self.out_q = out_q 
