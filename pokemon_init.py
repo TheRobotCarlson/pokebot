@@ -38,6 +38,9 @@ def initialize_mon(species, level):
     else:
         max_stats.append(stat_sort[0])
         
+    if 'hp' in stat_sort:
+        stat_sort.remove('hp')
+        
     stats = {}
     
     # calculate stat values
@@ -59,7 +62,7 @@ def initialize_mon(species, level):
     if 'spe' in max_stats:
         stats['spe'] = math.floor(stats['spe']*1.1)
     else:
-        stats[stat_sort[0]]  = math.floor(stats[stat_sort[0]]*1.1)
+        stats[stat_sort[0]] = math.floor(stats[stat_sort[0]]*1.1)
     
     # Decide the most likely ability using the ratings from the ability dict
     poss_abil = [pokedex[species]["abilities"][i] for i in pokedex[species]["abilities"]]
