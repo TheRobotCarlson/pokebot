@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e7ec285-f743-4c9c-bdfc-9234f1023b45" name="Default" comment="" />
+    <list default="true" id="4e7ec285-f743-4c9c-bdfc-9234f1023b45" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/parse_input.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/temp_console_2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pokebot.iml" afterPath="$PROJECT_DIR$/.idea/pokebot.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console-test.py" afterPath="$PROJECT_DIR$/console-test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pokebot.py" afterPath="$PROJECT_DIR$/pokebot.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,31 +20,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pokebot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pokebot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="97" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console-test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pokemon_init.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pokemon_init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-547">
+              <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console-test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/console-test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="754">
+              <caret line="68" column="75" lean-forward="false" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -46,11 +55,73 @@
       <file leaf-file-name="console-read.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/console-read.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="522">
+              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parse_input.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/parse_input.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="297" column="35" lean-forward="false" selection-start-line="297" selection-start-column="35" selection-end-line="297" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="abilities.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/abilities.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="208" column="92" lean-forward="true" selection-start-line="208" selection-start-column="92" selection-end-line="208" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moves.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/moves.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="596" column="94" lean-forward="false" selection-start-line="596" selection-start-column="88" selection-end-line="596" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console-feed-list.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console-feed-list.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp_console.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp_console.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp_console_2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp_console_2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="117" lean-forward="false" selection-start-line="0" selection-start-column="117" selection-end-line="0" selection-end-column="117" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,13 +135,31 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>temp_str</find>
+      <find>attack</find>
+      <find>tapu lele</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>line</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/console-read.py" />
+        <option value="$PROJECT_DIR$/TAMER_Input.py" />
+        <option value="$PROJECT_DIR$/console-feed-list.txt" />
         <option value="$PROJECT_DIR$/console-test.py" />
         <option value="$PROJECT_DIR$/pokebot.py" />
+        <option value="$PROJECT_DIR$/temp_console.txt" />
+        <option value="$PROJECT_DIR$/temp_console_2.txt" />
+        <option value="$PROJECT_DIR$/parse_input.py" />
       </list>
     </option>
   </component>
@@ -80,6 +169,7 @@
     <option name="width" value="1843" />
     <option name="height" value="1003" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -95,8 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,7 +196,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -127,7 +220,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.console-test">
+  <component name="RunManager" selected="Python.parse_input">
+    <configuration name="TAMER_Input" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pokebot" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TAMER_Input.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="console-read" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,7 +272,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="parse_input" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -174,7 +284,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pokebot" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parse_input.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -196,18 +306,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pokebot" />
-      <item index="2" class="java.lang.String" itemvalue="Python.console-test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.console-read" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.pokebot" />
+      <item index="1" class="java.lang.String" itemvalue="Python.console-test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.console-read" />
+      <item index="3" class="java.lang.String" itemvalue="Python.TAMER_Input" />
+      <item index="4" class="java.lang.String" itemvalue="Python.parse_input" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.console-test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.console-read" />
-        <item index="2" class="java.lang.String" itemvalue="Python.pokebot" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.parse_input" />
+        <item index="1" class="java.lang.String" itemvalue="Python.console-test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TAMER_Input" />
+        <item index="3" class="java.lang.String" itemvalue="Python.console-read" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pokebot" />
       </list>
     </recent_temporary>
   </component>
@@ -226,13 +338,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3224" height="1754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.194375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32092425" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61630696" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35003212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -255,11 +368,157 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pokebot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parse_input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1247">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-feed-list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="68" column="75" lean-forward="true" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pokebot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2987">
+          <caret line="112" column="27" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="112" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-feed-list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parse_input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pokebot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -295,7 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -303,7 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -311,15 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -337,17 +585,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TAMER_Input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <marker date="1512984270503" expanded="true" signature="0:8" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-feed.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10556">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/console-read.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="522">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pokebot.py">
+    <entry file="file://$PROJECT_DIR$/moves.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="596" column="94" lean-forward="false" selection-start-line="596" selection-start-column="88" selection-end-line="596" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="68" column="75" lean-forward="false" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console-feed-list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp_console.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -355,12 +660,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/console-test.py">
+    <entry file="file://$PROJECT_DIR$/temp_console_2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="117" lean-forward="false" selection-start-line="0" selection-start-column="117" selection-end-line="0" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pokedex.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="18799" column="59" lean-forward="false" selection-start-line="18799" selection-start-column="50" selection-end-line="18799" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="733">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/items.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-609">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abilities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="208" column="92" lean-forward="true" selection-start-line="208" selection-start-column="92" selection-end-line="208" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pokemon_init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-547">
+          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pokebot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parse_input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="297" column="35" lean-forward="false" selection-start-line="297" selection-start-column="35" selection-end-line="297" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

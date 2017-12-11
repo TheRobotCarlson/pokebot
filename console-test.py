@@ -9,6 +9,7 @@ from time import sleep
 import urllib.parse
 import random
 
+
 chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.default_content_setting_values.notifications": 2}
 chrome_options.add_experimental_option("prefs", prefs)
@@ -63,51 +64,52 @@ while True:
             random.choice(driver.find_elements_by_name("chooseMove")).click()
 
     for entry in driver.get_log('browser'):
-        if entry['source'] == 'console-api':
-            item = entry['message'][entry['message'].index("\"") + 1: -1]
-            loc = item.find(url_end)
-
-            # try:
-            #     if len(driver.find_elements_by_name("chooseMove")) > 0:
-            #         random.choice(driver.find_elements_by_name("chooseMove")).click()
-            #         print("here2")
-            #         continue
-            # except ElementNotVisibleException:
-            #     if len(driver.find_elements_by_name("chooseSwitch")) > 0:
-            #         random.choice(driver.find_elements_by_name("chooseSwitch")).click()
-            #         continue
-
-            if loc != -1:
-                temp_str = item[loc + len(url_end):]
-                find_request = "request"
-                loc = temp_str.find(find_request)
-
-                if loc != -1:
-                    print(temp_str[loc + len(find_request) + 1:])
-                    continue
-
-                find_request = "choice"
-                loc = temp_str.find(find_request)
-
-                if loc != -1:
-                    print(temp_str[loc + len(find_request) + 1:])
-                    continue
-
-                find_request = "inactive"
-                loc = temp_str.find(find_request)
-
-                if loc != -1:
-                    print(temp_str[loc + len(find_request) + 1:])
-                    continue
-
-                find_request = "choose"
-                loc = temp_str.find(find_request)
-
-                if loc != -1:
-                    print(temp_str[loc + len(find_request) + 1:])
-                    continue
-
-                print(temp_str)
-            else:
-                print(item)
-    sleep(10)
+        print(entry)
+        # if entry['source'] == 'console-api':
+        #     item = entry['message'][entry['message'].index("\"") + 1: -1]
+        #     loc = item.find(url_end)
+        #
+        #     # try:
+        #     #     if len(driver.find_elements_by_name("chooseMove")) > 0:
+        #     #         random.choice(driver.find_elements_by_name("chooseMove")).click()
+        #     #         print("here2")
+        #     #         continue
+        #     # except ElementNotVisibleException:
+        #     #     if len(driver.find_elements_by_name("chooseSwitch")) > 0:
+        #     #         random.choice(driver.find_elements_by_name("chooseSwitch")).click()
+        #     #         continue
+        #
+        #     if loc != -1:
+        #         temp_str = item[loc + len(url_end):]
+        #         find_request = "request"
+        #         loc = temp_str.find(find_request)
+        #
+        #         if loc != -1:
+        #             print(temp_str[loc + len(find_request) + 1:])
+        #             continue
+        #
+        #         find_request = "choice"
+        #         loc = temp_str.find(find_request)
+        #
+        #         if loc != -1:
+        #             print(temp_str[loc + len(find_request) + 1:])
+        #             continue
+        #
+        #         find_request = "inactive"
+        #         loc = temp_str.find(find_request)
+        #
+        #         if loc != -1:
+        #             print(temp_str[loc + len(find_request) + 1:])
+        #             continue
+        #
+        #         find_request = "choose"
+        #         loc = temp_str.find(find_request)
+        #
+        #         if loc != -1:
+        #             print(temp_str[loc + len(find_request) + 1:])
+        #             continue
+        #
+        #         print(temp_str)
+        #     else:
+        #         print(item)
+    sleep(5)
