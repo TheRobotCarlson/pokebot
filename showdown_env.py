@@ -65,7 +65,7 @@ class showdown:
         prev_state = self.state
         self.state = []
 
-        while self.state != -1 or len(self.state) == 0:
+        while self.state != -1 and len(self.state) == 0:
             if action > 3:
                 switch_elements = self.driver.find_elements_by_name("chooseSwitch")
                 if 0 < action - 4 < len(switch_elements):
