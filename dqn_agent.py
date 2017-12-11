@@ -74,9 +74,10 @@ if __name__ == "__main__":
     # agent.load("./save/pokebot_training.h5")
     done = False
     batch_size = 32
-    env = showdown("therobotcarlson2")
+    env = showdown("therobotcarlson3")
 
     for e in range(EPISODES):
+        env.reset()
         state = [0] * state_size
         state = np.reshape(state, [1, state_size])
         for time in range(500):
@@ -99,4 +100,4 @@ if __name__ == "__main__":
         if len(agent.memory) > batch_size:
             agent.replay(batch_size)
 
-        # agent.save("./save/pokebot_training.h5")
+        agent.save("./save/pokebot_training.h5")
