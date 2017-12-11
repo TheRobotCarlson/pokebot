@@ -87,7 +87,7 @@ if __name__ == "__main__":
                 next_state, reward, done = env.step(action)
             else:
                 next_state, reward, done = state, 0, False
-            
+
             reward = reward if not done else 0
             next_state = np.reshape(next_state, [1, state_size])
             agent.remember(state, action, reward, next_state, done)
@@ -99,4 +99,4 @@ if __name__ == "__main__":
         if len(agent.memory) > batch_size:
             agent.replay(batch_size)
 
-        agent.save("./save/pokebot_training.h5")
+        # agent.save("./save/pokebot_training.h5")
