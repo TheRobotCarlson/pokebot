@@ -177,6 +177,10 @@ def get_pokemon(p):
     return pokemon_dict_temp
 
 
+def clean_name(name):
+    return name.lower().replace(" ", "").replace("-", "")
+
+
 def parse_json(s):
     s = re.sub(r'null', '"null"', s)
     return json.loads(re.sub(r'\\', '', s))  # ast.literal_eval(
@@ -194,8 +198,8 @@ def inside(l, p):
     return any([True if p in x else False for x in l])
 
 
-def read_console(lines):
-    my_name = "therobotcarlson2"
+def read_console(lines, my_name):
+    # my_name = "therobotcarlson2"
     my_identity = ""
     enemy_identity = ""
 
@@ -294,7 +298,7 @@ def read_console(lines):
             if inside(line_data, "player"):
                 if 'start' in line_data:
                     switch_index = line_data.index('switch')
-                    pokemon_name = line_data[switch_index + 1][5:].lower().replace(" ", "")
+                    pokemon_name = clean_name(line_data[switch_index + 1][5:])
                     pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
                     stats, ability = initialize_mon(pokemon_name, pokemon_level)
 
@@ -324,7 +328,7 @@ def read_console(lines):
                         switch_index = line_data.index('switch', switch_index + 1)
 
                     if enemy_identity in line_data[switch_index + 1]:
-                        pokemon_name = line_data[switch_index + 1][5:].lower().replace(" ", "")
+                        pokemon_name = clean_name(line_data[switch_index + 1][5:])
 
                         if pokemon_name not in pokemon_dict_p2:
                             pokemon_level = int(line_data[switch_index + 2].split(',')[1][2:])
@@ -349,7 +353,7 @@ def read_console(lines):
                         pokemon_name = ""
                         for i, piece in enumerate(line_data):
                             if enemy_identity in piece:
-                                pokemon_name = piece[5:].lower().replace(" ", "")
+                                pokemon_name = clean_name(piece[5:])
                                 if i + 1 < len(line_data) and re.match(r'\d+?/\d+?[ \w]+', line_data[i + 1]):
                                     last_condition = line_data[i + 1]
 
@@ -366,7 +370,7 @@ def read_console(lines):
                                 last_condition = line_data[i + 1]
 
                     if pokemon_name != "" and last_condition != "" and pokemon_name in pokemon_dict_p2:
-                        print(line_data)
+                        # print(line_data)
                         pokemon_dict_p2[pokemon_name]["condition"] = last_condition
 
                 else:

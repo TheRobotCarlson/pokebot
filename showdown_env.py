@@ -12,6 +12,7 @@ from parse_input import read_console
 from TAMER_Input import TAMERInput
 import queue
 
+
 class showdown:
     def __init__(self, username):
         self.in_q = queue.Queue()
@@ -21,8 +22,10 @@ class showdown:
         self.username = username
 
         self.init_selenium()
+        self.state = []
         # self.tamer.run()
 
+    # sets up
     def init_selenium(self):
         chrome_options = webdriver.ChromeOptions()
         prefs = {"profile.default_content_setting_values.notifications": 2}
@@ -51,7 +54,6 @@ class showdown:
         sleep(3)
 
         self.driver.find_element_by_name("search").click()
-        self.state = []
 
     def get_actions(self):
         return list(self.driver.find_elements_by_name("chooseMove")) + list(self.driver.find_elements_by_name("chooseSwitch"))
@@ -77,18 +79,21 @@ class showdown:
         prev_state = self.state
         self.state = []
 
-        while self.state != -1 and len(self.state) == 0:
+        while len(self.state) == 0:
             if action > 3:
                 switch_elements = self.driver.find_elements_by_name("chooseSwitch")
                 if 0 < action - 4 < len(switch_elements):
                     self.driver.find_elements_by_name("chooseSwitch")[action - 4].click()
             else:
-                move_elements = self.driver.find_elements_by_name("chooseMove")
-                if 0 < action < len(move_elements):
+                switch_elements = self.driver.find_elements_by_name("chooseSwitch")
+                if 0 < action - 4 < len(switch_elements):
                     self.driver.find_elements_by_name("chooseMove")[action].click()
 
             sleep(2)
-            self.state = read_console(self.driver.get_log('browser'))
+            self.state = read_console(self.driver.get_log('browser'), self.username)
+
+            if self.state == -1:
+                break
 
         self.tamer.in_q.put((prev_state, action))
 
@@ -105,7 +110,10 @@ class showdown:
             return self.state, reward, False
 
     def reset(self):
+        print("here")
         self.driver.close()
         self.driver.quit()
-
+        sleep(3)
         self.init_selenium()
+        self.state = []
+

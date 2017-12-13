@@ -5,6 +5,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 from showdown_env import showdown
+from time import sleep
 
 EPISODES = 100
 
@@ -69,7 +70,7 @@ class DQNAgent:
 if __name__ == "__main__":
 
     state_size = 2664
-    action_size = 9
+    action_size = 4
     agent = DQNAgent(state_size, action_size)
     # agent.load("./save/pokebot_training.h5")
     done = False
@@ -77,10 +78,11 @@ if __name__ == "__main__":
     env = showdown("therobotcarlson3")
 
     for e in range(EPISODES):
-        env.reset()
+
         state = [0] * state_size
         state = np.reshape(state, [1, state_size])
         for time in range(500):
+            sleep(2)
             # env.render()
             no_list = []
             action = agent.act(state)
@@ -90,9 +92,11 @@ if __name__ == "__main__":
                 next_state, reward, done = state, 0, False
 
             reward = reward if not done else 0
-            next_state = np.reshape(next_state, [1, state_size])
+            if not done:
+                next_state = np.reshape(next_state, [1, state_size])
+                state = next_state
             agent.remember(state, action, reward, next_state, done)
-            state = next_state
+
             if done:
                 print("episode: {}/{}, score: {}, e: {:.2}"
                       .format(e, EPISODES, time, agent.epsilon))
@@ -101,3 +105,4 @@ if __name__ == "__main__":
             agent.replay(batch_size)
 
         agent.save("./save/pokebot_training.h5")
+        env.reset()
